@@ -1,0 +1,69 @@
+/* 로그인 박스 전체 */
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 383px;
+    text-align: center;
+    position: fixed;
+}
+
+
+/* 타이틀 */
+.title {
+    font-size: 32px;
+    font-family: "SUIT-Medium", Helvetica;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+/* 로고 텍스트 */
+.logo-text {
+    font-size: 32px;
+    font-family: "SUIT-Heavy", Helvetica;
+    font-weight: 700;
+    color: limegreen;
+}
+
+/*  로그인 버튼 */
+.login-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 22px;
+    font-family: "SUIT-SemiBold", Helvetica;
+    font-weight: 600;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*  회원가입 컨테이너 */
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 14px;
+    width: 100%;
+    gap: 4px;
+}
+
+/*  회원가입 텍스트 */
+.signup-text {
+    font-size: 14px;
+    font-family: "SUIT-Medium", Helvetica;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+/*  회원가입 링크 */
+.signup-link {
+    font-size: 14px;
+    font-family: "SUIT-SemiBold", Helvetica;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
