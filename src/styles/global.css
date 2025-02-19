@@ -12,7 +12,8 @@ body {
 }
 
 /* 로그인 페이지 중앙 정렬 */
-.login-page {
+.login-page,
+.signin-page {
   display: flex;
   flex-direction: column;
   align-items: center;
