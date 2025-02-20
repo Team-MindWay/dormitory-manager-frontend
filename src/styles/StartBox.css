@@ -1,5 +1,5 @@
 /* 로그인 박스 전체 */
-.login-box {
+.start-box {
   display: flex;
   flex-direction: column;
   align-items: center;

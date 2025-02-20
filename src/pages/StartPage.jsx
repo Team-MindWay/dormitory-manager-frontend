@@ -1,13 +1,13 @@
 import React from "react";
 import LoginBackground from "../components/LoginBackground";
-import LoginBox from "../components/LoginBox";
 import "../styles/global.css";
+import StartBox from "../components/StartBox";
 
 const LoginPage = () => {
   return (
-    <div className="login-page">
+    <div className="start-page">
       <LoginBackground />
-      <LoginBox />
+      <StartBox />
     </div>
   );
 };

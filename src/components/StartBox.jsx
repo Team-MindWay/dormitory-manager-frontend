@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/loginBox.css";
+import "../styles/StartBox.css";
 
-const LoginBox = () => {
+const StartBox = () => {
   return (
-    <div className="login-box">
+    <div className="start-box">
       <div className="title">
         <span className="logo-text">DOMA</span>를 시작해 볼까요?
       </div>
@@ -17,4 +17,4 @@ const LoginBox = () => {
   );
 };
 
-export default LoginBox;
+export default StartBox;
