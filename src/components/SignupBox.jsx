@@ -14,40 +14,52 @@ const SignupBox = () => {
       </div>
       <form className="form-box">
         <div className="input-container">
-          <span className="id-text">아이디</span>
+          <label htmlFor="id" className="id-text">
+            아이디
+          </label>
           <input
             type="text"
             placeholder="아이디를 입력해주세요."
+            id="id"
             value={id}
             onChange={(e) => setId(e.target.value)}
           />
         </div>
 
         <div className="input-container">
-          <span className="password-text">비밀번호</span>
+          <label htmlFor="password" className="password-text">
+            비밀번호
+          </label>
           <input
             type="password"
             placeholder="비밀번호를 입력해주세요."
+            id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
 
         <div className="input-container">
-          <span className="checkpassword-text">비밀번호 확인</span>
+          <label htmlFor="checkPassword" className="checkpassword-text">
+            비밀번호 확인
+          </label>
           <input
             type="password"
             placeholder="비밀번호를 다시 입력해주세요."
+            id="checkPassword"
             value={checkpassword}
             onChange={(e) => setCheckPassword(e.target.value)}
           />
         </div>
 
         <div className="input-container">
-          <span className="name-text">이름</span>
+          <label htmlFor="name" className="name-text">
+            이름
+          </label>
           <input
             type="text"
             placeholder="이름을 입력해주세요."
+            id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />

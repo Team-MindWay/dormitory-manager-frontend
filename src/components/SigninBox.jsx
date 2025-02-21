@@ -12,20 +12,26 @@ const SigniBox = () => {
       </div>
       <form className="form-box">
         <div className="input-container">
-          <span className="id-text">아이디</span>
+          <label htmlFor="id" className="id-text">
+            아이디
+          </label>
           <input
             type="id"
             placeholder="아이디를 입력해주세요."
+            id="id"
             value={id}
             onChange={(e) => setId(e.target.value)}
           />
         </div>
 
         <div className="input-container">
-          <span className="password-text">비밀번호</span>
+          <label htmlFor="password" className="password-text">
+            비밀번호
+          </label>
           <input
             type="password"
             placeholder="비밀번호를 입력해주세요."
+            id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
