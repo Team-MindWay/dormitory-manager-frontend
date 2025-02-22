@@ -14,7 +14,8 @@ body {
 /* 로그인 페이지 중앙 정렬 */
 .start-page,
 .signin-page,
-.signup-page {
+.signup-page,
+.findid-page {
   display: flex;
   flex-direction: column;
   align-items: center;
