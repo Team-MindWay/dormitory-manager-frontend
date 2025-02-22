@@ -39,7 +39,8 @@ const SigniBox = () => {
       </form>
       <button className="signin-button">로그인</button>
       <div className="find-box">
-        <p>아이디 찾기</p> | <p>비밀번호 찾기</p>
+        <p className="find-id">아이디 찾기</p> |{" "}
+        <p className="find-password">비밀번호 찾기</p>
       </div>
     </div>
   );
