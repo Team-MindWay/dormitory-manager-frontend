@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/StartBox.css";
+import { useNavigate } from "react-router-dom";
 
 const StartBox = () => {
+  const go = useNavigate();
+
   return (
     <div className="start-box">
       <div className="title">
@@ -11,7 +14,9 @@ const StartBox = () => {
       <button className="login-button">로그인</button>
       <div className="signup-container">
         <p className="signup-text">아직 가입 전이면?</p>
-        <p className="signup-link">회원가입 하러가기</p>
+        <p className="signup-link" onClick={() => go("/signup")}>
+          회원가입 하러가기
+        </p>
       </div>
     </div>
   );

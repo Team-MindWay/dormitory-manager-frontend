@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "../styles/SigninBox.css";
+import { useNavigate } from "react-router-dom";
 
 const SigniBox = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
+
+  const go = useNavigate();
 
   return (
     <div className="signin-box">
@@ -39,8 +42,10 @@ const SigniBox = () => {
       </form>
       <button className="signin-button">로그인</button>
       <div className="find-box">
-        <p className="find-id">아이디 찾기</p> |{" "}
-        <p className="find-password">비밀번호 찾기</p>
+        <p className="find-id" onClick={() => go("/findid")}>
+          아이디 찾기
+        </p>{" "}
+        | <p className="find-password">비밀번호 찾기</p>
       </div>
     </div>
   );
