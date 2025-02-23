@@ -15,7 +15,8 @@ body {
 .start-page,
 .signin-page,
 .signup-page,
-.findid-page {
+.findid-page,
+.findpassword-page {
   display: flex;
   flex-direction: column;
   align-items: center;

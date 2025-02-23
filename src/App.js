@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SigninPage from "./pages/SigninPage";
 import SignupPage from "./pages/SignupPage";
 import FindIdPage from "./pages/FindIDPage";
+import FindPasswordStep1Page from "./pages/FindPasswordStep1Page";
 const App = () => {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="signin" element={<SigninPage />} />
         <Route path="signup" element={<SignupPage />} />
         <Route path="findid" element={<FindIdPage />} />
+        <Route path="findpasswordstep1" element={<FindPasswordStep1Page />} />
       </Routes>
     </BrowserRouter>
   );
