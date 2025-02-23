@@ -8,8 +8,7 @@ const FindIDBox = ({ userid }) => {
   const [name, setName] = useState("");
 
   const onBtn = () => {
-    if (isFound) {
-      setIsFound(false);
+    if (!name.trim() || !password.trim()) {
     } else {
       setIsFound(true);
     }
