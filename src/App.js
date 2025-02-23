@@ -5,6 +5,7 @@ import SigninPage from "./pages/SigninPage";
 import SignupPage from "./pages/SignupPage";
 import FindIdPage from "./pages/FindIDPage";
 import FindPasswordStep1Page from "./pages/FindPasswordStep1Page";
+import FindPasswordStep2Page from "./pages/FindPasswordStep2Page";
 const App = () => {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="signup" element={<SignupPage />} />
         <Route path="findid" element={<FindIdPage />} />
         <Route path="findpasswordstep1" element={<FindPasswordStep1Page />} />
+        <Route path="findpasswordstep2" element={<FindPasswordStep2Page />} />
       </Routes>
     </BrowserRouter>
   );
