@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import "../styles/FindIDBox.css";
+import { useNavigate } from "react-router-dom";
 
 const FindIDBox = ({ userid }) => {
+  const go = useNavigate();
   const [isFound, setIsFound] = useState(false);
 
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
   const onBtn = () => {
-    if (!name.trim() || !password.trim()) {
+    if (!name.trim() || !password.trim() || isFound) {
+      setIsFound(go("/signin"));
     } else {
       setIsFound(true);
     }
