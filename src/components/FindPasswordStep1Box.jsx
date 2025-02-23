@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/FindPasswordBox.css";
+import "../styles/FindPasswordStep1Box.css";
 
 const FindPasswordStep1Box = () => {
   const [id, setId] = useState("");
