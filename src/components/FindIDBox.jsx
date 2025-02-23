@@ -10,8 +10,12 @@ const FindIDBox = ({ userid }) => {
   const [name, setName] = useState("");
 
   const onBtn = () => {
-    if (!name.trim() || !password.trim() || isFound) {
-      setIsFound(go("/signin"));
+    if (!name.trim() || !password.trim()) {
+      return;
+    }
+
+    if (isFound) {
+      go("/signin");
     } else {
       setIsFound(true);
     }
