@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "../styles/FindPasswordStep1Box.css";
+import { useNavigate } from "react-router-dom";
 
 const FindPasswordStep1Box = () => {
+  const go = useNavigate();
+
   const [id, setId] = useState("");
   const [name, setName] = useState("");
 
@@ -39,7 +42,9 @@ const FindPasswordStep1Box = () => {
         </div>
       </form>
 
-      <button className="Button">다음</button>
+      <button className="Button" onClick={() => go("/findpasswordstep2")}>
+        다음
+      </button>
     </div>
   );
 };

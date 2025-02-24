@@ -45,7 +45,10 @@ const SigniBox = () => {
         <p className="find-id" onClick={() => go("/findid")}>
           아이디 찾기
         </p>{" "}
-        | <p className="find-password">비밀번호 찾기</p>
+        |{" "}
+        <p className="find-password" onClick={() => go("/findpasswordstep1")}>
+          비밀번호 찾기
+        </p>
       </div>
     </div>
   );
