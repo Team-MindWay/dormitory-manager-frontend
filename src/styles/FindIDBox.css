@@ -1,0 +1,88 @@
+.FindID-box {
+  width: 383px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.result-box {
+  width: 100%;
+  height: 88px;
+  border-radius: 12px;
+  background-color: #2f2f2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.findid-text {
+  width: 130px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.findid {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 800;
+  display: inline;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+  cursor: default;
+}
+
+.form-box {
+  width: 383px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-box,
+.name-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.password-text,
+.name-box {
+  color: #fafafa;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input {
+  height: 44px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #9c9c9c;
+  background-color: #1e1e1e;
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 15px;
+}
+
+.Button {
+  width: 100%;
+  height: 49px;
+  border-radius: 10px;
+  border: none;
+
+  background-color: #2f2f2f;
+  color: #e0e0e0;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
