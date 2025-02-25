@@ -1,5 +1,5 @@
 import React from "react";
-import LoginBackground from "../components/LoginBackground";
+import { LoginBackground } from "../components/Common";
 import { FindPasswordStep1Box } from "../components/Auth";
 const FindPasswordStep1Page = () => {
   return (

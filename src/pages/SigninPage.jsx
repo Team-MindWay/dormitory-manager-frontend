@@ -1,5 +1,5 @@
 import React from "react";
-import LoginBackground from "../components/LoginBackground";
+import { LoginBackground } from "../components/Common";
 import { SigninBox } from "../components/Auth";
 import "../styles/global.css";
 
