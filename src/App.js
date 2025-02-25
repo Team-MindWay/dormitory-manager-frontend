@@ -1,21 +1,17 @@
 import React from "react";
-import StartPage from "./pages/StartPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SigninPage from "./pages/SigninPage";
-import SignupPage from "./pages/SignupPage";
-import FindIdPage from "./pages/FindIDPage";
-import FindPasswordStep1Page from "./pages/FindPasswordStep1Page";
-import FindPasswordStep2Page from "./pages/FindPasswordStep2Page";
+import { Signin, Signup, Start, FindID, FindPasswordStep1, FindPasswordStep2 } from "./pages";
+
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<StartPage />} />
-        <Route path="signin" element={<SigninPage />} />
-        <Route path="signup" element={<SignupPage />} />
-        <Route path="findid" element={<FindIdPage />} />
-        <Route path="findpasswordstep1" element={<FindPasswordStep1Page />} />
-        <Route path="findpasswordstep2" element={<FindPasswordStep2Page />} />
+        <Route path="/" element={<Start />} />
+        <Route path="signin" element={<Signin />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="findid" element={<FindID />} />
+        <Route path="findpasswordstep1" element={<FindPasswordStep1 />} />
+        <Route path="findpasswordstep2" element={<FindPasswordStep2 />} />
       </Routes>
     </BrowserRouter>
   );
