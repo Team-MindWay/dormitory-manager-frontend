@@ -13,6 +13,7 @@ const App = () => {
         <Route path="findpasswordstep1" element={<FindPasswordStep1 />} />
         <Route path="findpasswordstep2" element={<FindPasswordStep2 />} />
         <Route path="home" element={<Home />} />
+        <Route path="*" element={<span children={"없는 페이지"} />} />
       </Routes>
     </BrowserRouter>
   );
