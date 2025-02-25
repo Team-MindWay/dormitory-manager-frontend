@@ -4,3 +4,4 @@ export { default as FindID } from "./FindIDPage";
 export { default as FindPasswordStep1 } from "./FindPasswordStep1Page";
 export { default as FindPasswordStep2 } from "./FindPasswordStep2Page";
 export { default as Start } from "./StartPage";
+export { default as Home } from "./HomePage";

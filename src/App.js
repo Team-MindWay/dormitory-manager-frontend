@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Signin, Signup, Start, FindID, FindPasswordStep1, FindPasswordStep2 } from "./pages";
+import { Signin, Signup, Start, FindID, FindPasswordStep1, FindPasswordStep2, Home } from "./pages";
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
         <Route path="findid" element={<FindID />} />
         <Route path="findpasswordstep1" element={<FindPasswordStep1 />} />
         <Route path="findpasswordstep2" element={<FindPasswordStep2 />} />
+        <Route path="home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

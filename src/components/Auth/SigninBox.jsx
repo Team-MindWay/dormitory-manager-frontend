@@ -7,18 +7,15 @@ const SigniBox = () => {
   const [password, setPassword] = useState("");
   const go = useNavigate();
 
-  // 뒤로 가기 함수
-  const handleGoBack = () => {
-    const confirmBack = window.confirm("정말 뒤로 넘어가실건가요?");
-    if (confirmBack) {
-      go(-1); // 사용자가 확인을 누르면 뒤로 가기
-    }
+  // 로그인 버튼 클릭 시 홈 화면으로 이동
+  const handleLogin = () => {
+    // 실제 로그인 기능이 추가될 경우, 로그인 검증 후 이동하도록 변경 가능
+    go("/home"); // "/home" 경로로 이동 (홈 화면 경로에 맞게 수정)
   };
 
   return (
     <div className="signin-box">
-      {/* "DOMA 로그인" 전체를 클릭하면 뒤로 가기 알림 */}
-      <div className="title" onClick={handleGoBack} style={{ cursor: "pointer" }}>
+      <div className="title" onClick={() => go(-1)} style={{ cursor: "pointer" }}>
         <span className="logo-text">DOMA</span> 로그인
       </div>
       <form className="form-box">
@@ -44,7 +41,10 @@ const SigniBox = () => {
           />
         </div>
       </form>
-      <button className="signin-button">로그인</button>
+      {/* 로그인 버튼 클릭 시 홈 화면으로 이동 */}
+      <button className="signin-button" onClick={handleLogin}>
+        로그인
+      </button>
       <div className="find-box">
         <p className="find-id" onClick={() => go("/findid")}>아이디 찾기</p> |{" "}
         <p className="find-password" onClick={() => go("/findpasswordstep1")}>비밀번호 찾기</p>
