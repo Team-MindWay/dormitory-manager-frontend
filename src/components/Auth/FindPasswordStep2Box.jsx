@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/FindPasswordStep2Box.css";
+import "../../styles/FindPasswordStep2Box.css";
 import { useNavigate } from "react-router-dom";
 
 const FindPasswordStep2Box = () => {

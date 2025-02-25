@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/SigninBox.css";
+import "../../styles/SigninBox.css";
 import { useNavigate } from "react-router-dom";
 
 const SigniBox = () => {

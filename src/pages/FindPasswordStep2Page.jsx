@@ -1,7 +1,6 @@
 import React from "react";
-import LoginBackground from "../components/LoginBackground";
-import FindPasswordStep2Box from "../components/FindPasswordStep2Box";
-
+import { LoginBackground } from "../components/Common";
+import { FindPasswordStep2Box } from "../components/Auth";
 const FindPasswordStep2Page = () => {
   return (
     <div className="findpassword-page">

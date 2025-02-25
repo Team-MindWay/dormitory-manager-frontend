@@ -1,6 +1,6 @@
 import React from "react";
-import LoginBackground from "../components/LoginBackground";
-import FindIDBox from "../components/FindIDBox";
+import { LoginBackground } from "../components/Common";
+import { FindIDBox } from "../components/Auth";
 
 const FindIdPage = () => {
   return (

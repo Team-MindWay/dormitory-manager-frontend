@@ -1,8 +1,7 @@
 import React from "react";
-import LoginBackground from "../components/LoginBackground";
+import { LoginBackground } from "../components/Common";
 import "../styles/global.css";
-import StartBox from "../components/StartBox";
-
+import { StartBox } from "../components/Auth";
 const LoginPage = () => {
   return (
     <div className="start-page">

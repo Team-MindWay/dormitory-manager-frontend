@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/StartBox.css";
+import "../../styles/StartBox.css";
 import { useNavigate } from "react-router-dom";
 
 const StartBox = () => {
