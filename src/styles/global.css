@@ -26,3 +26,8 @@ body {
   position: relative;
   z-index: 1;
 }
+
+body {
+  overflow: hidden;
+  /* ✅ 전체 페이지 스크롤 막기 */
+}

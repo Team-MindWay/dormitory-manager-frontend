@@ -1,0 +1,44 @@
+.ranking-list {
+    position: relative;
+    width: 600px;
+    height: 580px;
+    border-radius: 20px;
+    padding: 20px;
+    color: #ccc;
+    background-color: #252525;
+
+
+}
+
+.ranking-list h2 {
+    text-align: center;
+    font-family: "SUIT-Bold", Helvetica;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+
+.ranking-header {
+    width: 90%;
+    /* 전체 너비의 90% 사용 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 0;
+    margin-bottom: -20px;
+}
+
+.ranking-header div:nth-child(1) {
+    /* 순위 */
+    margin-left: -20px;
+}
+
+.ranking-header div:nth-child(2) {
+    margin-left: -420px;
+}
+
+.ranking-header div:nth-child(3) {
+    margin-right: -20px;
+}

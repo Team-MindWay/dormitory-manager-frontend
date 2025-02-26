@@ -1,8 +1,10 @@
-import React from 'react';
-
+import React from "react";
+import RankingListContainer from "../components/Home/RankingLstContainer";
 const HomePage = () => {
     return (
-        <div>
+        <div className="home-page">
+            <RankingListContainer />
+
         </div>
     );
 };
