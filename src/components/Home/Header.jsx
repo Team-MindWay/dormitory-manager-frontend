@@ -31,8 +31,20 @@ const Header = () => {
                 <span className="id">1403 이산</span>
                 <div className="divider"></div>
                 <div className="info">
-                    <div className="info-text">호실 <span className="highlight">518호</span></div>
-                    <div className="info-text">오늘의 청소 <span className="highlight">2학년</span></div>
+                    <div className="info-text">
+                        <span>호실</span>
+                        <span className="highlight-wrapper">
+                            <span className="highlight">518</span>
+                            <span className="text">호</span>
+                        </span>
+                    </div>
+                    <div className="info-text">
+                        <span>오늘의 청소</span>
+                        <span className="highlight-wrapper">
+                            <span className="highlight">2</span>
+                            <span className="text">학년</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

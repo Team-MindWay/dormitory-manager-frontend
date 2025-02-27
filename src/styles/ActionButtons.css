@@ -11,7 +11,7 @@
 .action-button {
     background-color: #252525;
     border-radius: 12px;
-    padding: 28px 46px;
+    padding: 28px 44px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -19,7 +19,7 @@
     border: none;
     cursor: pointer;
     color: #cccccc;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
 }

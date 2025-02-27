@@ -37,7 +37,5 @@
     -webkit-box-orient: vertical;
 
     display: flex;
-    /* ✅ 표준 속성 대체 */
     line-clamp: 2;
-    /* ✅ 표준 속성 추가 */
 }

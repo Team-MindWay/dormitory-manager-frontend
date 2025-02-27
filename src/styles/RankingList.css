@@ -5,7 +5,7 @@
     height: auto;
     border-radius: 20px;
     padding: 20px;
-    color: #918d8d;
+    color: #625e5e;
     background-color: #252525;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     font-family: "SUIT-Bold", Helvetica;
     color: white;
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-top: 6px;
 }
 
 .ranking-header {
@@ -28,7 +28,8 @@
     font-size: 14px;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 4px 0;
+    margin-top: -16px;
 }
 
 /* ✅ 각 요소 위치 개별 조정 */
