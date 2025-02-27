@@ -1,4 +1,4 @@
-/* 모달 배경 */
+/* ✅ 모달 배경 */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -9,55 +9,104 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
-/* 모달 본문 */
-.modal-content {
+/* ✅ 모달 본문 */
+.modal-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 520px;
+    width: 90%;
     background: #252525;
-    padding: 20px;
-    width: 400px;
-    border-radius: 8px;
-    position: relative;
+    padding: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+
 }
 
-/* 닫기 버튼 */
-.close-btn {
-    position: absolute;
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.modal-title {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    left: 188px;
     top: 10px;
-    right: 10px;
+    /* 원하는 만큼 왼쪽(+) 또는 오른쪽(-)으로 이동 */
+}
+
+
+.close-btn {
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     color: white;
+    width: 24px;
+    /* 버튼 크기 일정하게 */
+    height: 24px;
+    position: relative;
+    top: -12px;
 }
 
-/* 폼 스타일 */
-form {
+/* ✅ 폼 스타일 */
+.modal-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
 }
 
+/* ✅ 입력 폼 라벨 */
+.form-group label {
+    font-size: 15px;
+    color: #878484;
+    margin-bottom: 4px;
+}
+
+/* ✅ 입력 필드 스타일 */
 input,
 textarea {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #5d5c5c;
-    background: #333;
+    padding: 6px 8px;
+    border: 1px solid #625d5b;
+    background: #252525;
     color: white;
-    border-radius: 4px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: -10px;
 }
 
+/* ✅ textarea 크기 조정 */
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* ✅ 완료 버튼 */
 .submit-btn {
-    background: #5d5c5c;
-    color: white;
+    background: #4c4c4c;
+    color: #7e7e7e;
     border: none;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .submit-btn:hover {
-    background: #7a7979;
+    background: #5d5c5c;
+    color: white;
 }
