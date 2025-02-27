@@ -8,7 +8,7 @@ const NoticeItem = ({ title, content, date }) => {
                 <div className="notice-title">{title}</div>
                 <div className="notice-text">{content}</div>
             </div>
-            <div className="notice-date">{date}</div> {/* ✅ 날짜만 남김 */}
+            <div className="notice-date">{date}</div>
         </div>
     );
 };
