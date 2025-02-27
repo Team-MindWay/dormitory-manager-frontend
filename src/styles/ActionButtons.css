@@ -1,0 +1,31 @@
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.action-button {
+    background-color: #252525;
+    border-radius: 12px;
+    padding: 28px 44px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    color: #cccccc;
+    font-size: 19px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.action-button:hover {
+    background-color: #333333;
+}
+
+.button-icon {
+    font-size: 24px;
+    color: #777777;
+}
