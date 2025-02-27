@@ -4,7 +4,7 @@
     height: 580px;
     border-radius: 20px;
     padding: 20px;
-    color: #ccc;
+    color: #918d8d;
     background-color: #252525;
     margin-left: -80px;
 
@@ -36,7 +36,7 @@
 }
 
 .ranking-header div:nth-child(2) {
-    margin-left: -420px;
+    margin-left: -300px;
 }
 
 .ranking-header div:nth-child(3) {

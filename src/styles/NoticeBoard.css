@@ -41,7 +41,7 @@
     flex: 1;
     /* ✅ 좌우 구분선이 자동으로 늘어나도록 설정 */
     height: 1px;
-    background-color: #5d5c5c;
+    background-color: #504f4f;
 }
 
 .notice-date {
