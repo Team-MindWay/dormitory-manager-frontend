@@ -1,9 +1,13 @@
 import React from "react";
-import RankingListContainer from "../components/Home/RankingLstContainer";
+import RankingList from "../components/Home/RankingList";
+import NoticeBoard from "../components/Home/NoticeBoard";
+import "../styles/HomePage.css";
+
 const HomePage = () => {
     return (
         <div className="home-page">
-            <RankingListContainer />
+            <RankingList />
+            <NoticeBoard />
 
         </div>
     );

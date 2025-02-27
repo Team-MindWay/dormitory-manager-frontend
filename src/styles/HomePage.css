@@ -1,0 +1,15 @@
+.home-page {
+    display: flex;
+    /* ✅ 가로 정렬 */
+    flex-direction: row;
+    /* ✅ 가로 방향 정렬 */
+    justify-content: space-between;
+    /* ✅ 가운데 정렬 */
+    align-items: stretch;
+    /* ✅ 위쪽 정렬 */
+    gap: 20px;
+    /* ✅ 사이 간격 조정 */
+    height: 100vh;
+    /* ✅ 전체 화면 높이 맞춤 */
+    padding-top: 280px;
+}
