@@ -32,7 +32,6 @@
     margin-top: -16px;
 }
 
-/* ✅ 각 요소 위치 개별 조정 */
 .ranking-header div:nth-child(1) {
     /* 순위 */
     margin-left: 5px;

@@ -81,7 +81,6 @@
     outline: none;
 }
 
-/* 벌점 리스트 */
 .penalty-list {
     display: flex;
     flex-direction: column;
@@ -113,7 +112,6 @@
     color: white;
     font-size: 14px;
     text-align: center;
-    /* 텍스트 가운데 정렬 */
 }
 
 
@@ -129,7 +127,6 @@
     justify-content: center;
 }
 
-/* 리스트 헤더 */
 .penalty-list-header {
     display: flex;
     justify-content: space-between;
@@ -142,7 +139,6 @@
     font-weight: 500;
 }
 
-/* 개별 헤더 스타일 */
 .penalty-header-room {
     flex: 1;
     text-align: left;

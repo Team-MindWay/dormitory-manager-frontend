@@ -22,8 +22,6 @@
 .list-left {
     display: flex;
     align-items: center;
-
-    /* ✅ 순위와 이름 사이 간격 */
 }
 
 .rank {

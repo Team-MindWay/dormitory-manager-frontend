@@ -1,4 +1,3 @@
-/* 공지 작성 모달 배경 */
 .notice-modal-overlay {
     position: fixed;
     top: 0;
@@ -11,7 +10,6 @@
     align-items: center;
 }
 
-/*  공지 작성 모달 본문 */
 .notice-modal-box {
     position: fixed;
     top: 50%;
@@ -26,7 +24,7 @@
     overflow: hidden;
 }
 
-/* 모달 헤더 */
+
 .notice-modal-header {
     display: flex;
     justify-content: space-between;
@@ -44,7 +42,7 @@
     top: 10px;
 }
 
-/* 닫기 버튼 */
+
 .notice-close-btn {
     background: none;
     border: none;
@@ -57,21 +55,20 @@
     top: -12px;
 }
 
-/* 폼 스타일 */
 .notice-modal-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-/*  입력 폼 라벨 */
+
 .notice-form-group label {
     font-size: 15px;
     color: #878484;
     margin-bottom: 4px;
 }
 
-/* 입력 필드 스타일 */
+
 .notice-input,
 .notice-textarea {
     width: 100%;
@@ -84,13 +81,13 @@
     margin-left: -10px;
 }
 
-/* textarea 크기 조정 */
+
 .notice-textarea {
     height: 150px;
     resize: none;
 }
 
-/* 완료 버튼 */
+
 .notice-submit-btn {
     background: #4c4c4c;
     color: #7e7e7e;
