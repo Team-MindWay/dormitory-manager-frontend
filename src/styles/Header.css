@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: -34px;
+}
+
+/*  현재 시간 */
+.time-section {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.time-section .label {
+    font-family: "SUIT-Bold", Helvetica;
+    font-size: 20px;
+    color: white;
+}
+
+.time-section .time {
+    font-family: "SUIT-ExtraBold", Helvetica;
+    font-size: 48px;
+    color: #a4e63a;
+    line-height: 52px;
+    font-weight: 400;
+}
+
+/*  사용자 정보 카드 */
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    padding: 20px 40px;
+    border-radius: 10px;
+    gap: 26px;
+    margin-bottom: 12px;
+}
+
+
+.id {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.divider {
+    width: 1.2px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-text {
+    font-size: 14px;
+    color: white;
+}
+
+.highlight {
+    color: #a4e63a;
+    font-weight: bold;
+}

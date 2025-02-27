@@ -1,0 +1,36 @@
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    /* ✅ 버튼 사이 간격 */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* ✅ 버튼 위쪽 여백 */
+}
+
+.action-button {
+    background-color: #252525;
+    border-radius: 12px;
+    padding: 28px 46px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* ✅ 아이콘과 텍스트 사이 간격 */
+    border: none;
+    cursor: pointer;
+    color: #cccccc;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.action-button:hover {
+    background-color: #333333;
+    /* ✅ 호버 시 색상 변경 */
+}
+
+.button-icon {
+    font-size: 24px;
+    color: #777777;
+    /* ✅ 아이콘 색상 */
+}

@@ -3,23 +3,18 @@
     border: 1px solid var(--g-5);
     border-radius: 8px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-center;
     padding: 12px 16px;
     width: 96%;
     color: #cccccc;
     border: 1px solid white;
     margin-bottom: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
     border-color: #5d5c5c;
 }
 
 .list-content {
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
 }
@@ -27,13 +22,18 @@
 .list-left {
     display: flex;
     align-items: center;
+
+    /* ✅ 순위와 이름 사이 간격 */
 }
 
 .rank {
     font-family: "SUIT-Bold", Helvetica;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
-    margin-right: 50px;
+    /* 순위와 이름 사이 간격 조정 */
+    margin-right: -26px;
+    width: 80px;
+    text-align: left;
 }
 
 .rank-1 {
@@ -56,16 +56,17 @@
 }
 
 .name {
-    color: var(--white);
-    font-family: "SUIT-Medium", Helvetica;
+    flex-grow: 1;
+    text-align: center;
     font-size: 16px;
     font-weight: 500;
+    color: white;
 }
 
 .score {
-    color: var(--white);
-    font-family: "SUIT-SemiBold", Helvetica;
+    width: 80px;
+    text-align: right;
     font-size: 15px;
     font-weight: 600;
-    margin-right: 6px;
+    color: white;
 }

@@ -1,44 +1,48 @@
 .ranking-list {
     position: relative;
-    width: 600px;
-    height: 580px;
+    width: 1400px;
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
     padding: 20px;
     color: #918d8d;
     background-color: #252525;
-    margin-left: -80px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
+
 
 .ranking-list h2 {
     text-align: center;
     font-family: "SUIT-Bold", Helvetica;
     color: white;
     font-size: 24px;
-    margin-bottom: 20px;
-
+    margin-bottom: 10px;
 }
 
 .ranking-header {
-    width: 90%;
-    /* 전체 너비의 90% 사용 */
+    width: 100%;
     display: flex;
+    font-size: 14px;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
     padding: 10px 0;
-    margin-bottom: -20px;
 }
 
+/* ✅ 각 요소 위치 개별 조정 */
 .ranking-header div:nth-child(1) {
     /* 순위 */
-    margin-left: -20px;
+    margin-left: 5px;
 }
 
 .ranking-header div:nth-child(2) {
-    margin-left: -300px;
+    /* 이름 */
+    margin-left: -340px;
 }
 
 .ranking-header div:nth-child(3) {
-    margin-right: -20px;
+    /* 점수 */
+    margin-right: 5px;
 }

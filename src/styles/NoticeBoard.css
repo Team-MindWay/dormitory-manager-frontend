@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 400px;
     height: 560px;
-    /* ✅ 최대 너비 제한 */
+    /* 최대 너비 제한 */
     background-color: #252525;
     border-radius: 12px;
     padding: 30px;
@@ -16,7 +16,7 @@
     font-size: 24px;
     margin-top: 10px;
     margin-bottom: 10px;
-    /* ✅ 제목 아래 간격 조정 */
+    /* 제목 아래 간격 조정 */
 }
 
 .notice-list {
@@ -30,25 +30,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* ✅ 날짜가 중앙에 오도록 설정 */
+    /* 날짜가 중앙에 오도록 설정 */
     gap: 10px;
     /* 날짜와 구분선 사이 간격 */
-    margin: 1px 0;
+    margin: -6px;
     /* 위아래 간격 추가 */
 }
 
 .notice-divider {
     flex: 1;
-    /* ✅ 좌우 구분선이 자동으로 늘어나도록 설정 */
+    /* 좌우 구분선이 자동으로 늘어나도록 설정 */
     height: 1px;
     background-color: #504f4f;
 }
 
 .notice-date {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #5d5c5c;
     text-align: center;
     white-space: nowrap;
-    /* ✅ 날짜가 줄바꿈되지 않도록 설정 */
+    /*  날짜가 줄바꿈되지 않도록 설정 */
 }

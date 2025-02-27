@@ -1,15 +1,37 @@
 .home-page {
     display: flex;
-    /* ✅ 가로 정렬 */
-    flex-direction: row;
-    /* ✅ 가로 방향 정렬 */
-    justify-content: space-between;
-    /* ✅ 가운데 정렬 */
-    align-items: stretch;
-    /* ✅ 위쪽 정렬 */
+    flex-direction: column;
+    /* ✅ 세로 정렬 */
+    align-items: center;
+    /* ✅ 중앙 정렬 */
     gap: 20px;
-    /* ✅ 사이 간격 조정 */
+    /* ✅ 요소 간 간격 */
     height: 100vh;
-    /* ✅ 전체 화면 높이 맞춤 */
-    padding-top: 280px;
+    padding-top: 50px;
+    /* ✅ 상단 여백 조정 */
+}
+
+/* ✅ 상단 (시간 & 버튼) 정렬 */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    /* ✅ 좌우 정렬 */
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* ✅ 버튼 정렬 */
+.action-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* ✅ 메인 콘텐츠 (랭킹 & 공지사항) 가로 정렬 */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
 }
