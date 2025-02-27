@@ -1,5 +1,5 @@
-/* ✅ 모달 배경 */
-.modal-overlay {
+/* 공지 작성 모달 배경 */
+.notice-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,11 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-/* ✅ 모달 본문 */
-.modal-box {
+/*  공지 작성 모달 본문 */
+.notice-modal-box {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -25,11 +24,10 @@
     border-radius: 12px;
     box-sizing: border-box;
     overflow: hidden;
-
 }
 
-
-.modal-header {
+/* 모달 헤더 */
+.notice-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,47 +35,45 @@
     width: 100%;
 }
 
-.modal-title {
+.notice-modal-title {
     font-size: 24px;
     color: white;
     font-weight: bold;
     position: relative;
-    left: 188px;
+    left: 192px;
     top: 10px;
-    /* 원하는 만큼 왼쪽(+) 또는 오른쪽(-)으로 이동 */
 }
 
-
-.close-btn {
+/* 닫기 버튼 */
+.notice-close-btn {
     background: none;
     border: none;
     font-size: 30px;
     cursor: pointer;
     color: white;
     width: 24px;
-    /* 버튼 크기 일정하게 */
     height: 24px;
     position: relative;
     top: -12px;
 }
 
-/* ✅ 폼 스타일 */
-.modal-form {
+/* 폼 스타일 */
+.notice-modal-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-/* ✅ 입력 폼 라벨 */
-.form-group label {
+/*  입력 폼 라벨 */
+.notice-form-group label {
     font-size: 15px;
     color: #878484;
     margin-bottom: 4px;
 }
 
-/* ✅ 입력 필드 스타일 */
-input,
-textarea {
+/* 입력 필드 스타일 */
+.notice-input,
+.notice-textarea {
     width: 100%;
     padding: 6px 8px;
     border: 1px solid #625d5b;
@@ -88,14 +84,14 @@ textarea {
     margin-left: -10px;
 }
 
-/* ✅ textarea 크기 조정 */
-textarea {
+/* textarea 크기 조정 */
+.notice-textarea {
     height: 150px;
     resize: none;
 }
 
-/* ✅ 완료 버튼 */
-.submit-btn {
+/* 완료 버튼 */
+.notice-submit-btn {
     background: #4c4c4c;
     color: #7e7e7e;
     border: none;
@@ -106,7 +102,7 @@ textarea {
     text-align: center;
 }
 
-.submit-btn:hover {
+.notice-submit-btn:hover {
     background: #5d5c5c;
     color: white;
 }
