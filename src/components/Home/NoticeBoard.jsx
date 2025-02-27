@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import NoticeItem from "../Common/NoticeItem";
+import NoticeFormModal from "./NoticeFormModal";
 import "../../styles/NoticeBoard.css";
 
 const noticeData = [
@@ -9,12 +10,12 @@ const noticeData = [
 ];
 
 const NoticeBoard = () => {
+    const [showModal, setShowModal] = useState(false); // 모달 상태
+
     return (
         <div className="notice-board">
             <h2>공지사항</h2>
             <div className="notice-list">
-                <div className="notice-divider"></div>
-
                 {noticeData.map((notice, index) => (
                     <React.Fragment key={index}>
                         <div className="notice-divider-container">
@@ -26,9 +27,11 @@ const NoticeBoard = () => {
                     </React.Fragment>
                 ))}
             </div>
+
+            <button className="add-notice-btn" onClick={() => setShowModal(true)}>+</button>
+
+            {showModal && <NoticeFormModal onClose={() => setShowModal(false)} />}
         </div>
-
-
     );
 };
 
