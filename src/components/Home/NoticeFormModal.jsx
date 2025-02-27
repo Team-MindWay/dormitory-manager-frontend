@@ -8,7 +8,7 @@ const NoticeFormModal = ({ onClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("새 공지:", { title, content });
-        onClose(); // 제출 후 모달 닫기
+        onClose();
     };
 
     return (
@@ -19,9 +19,7 @@ const NoticeFormModal = ({ onClose }) => {
                     <button className="notice-close-btn" onClick={onClose}>×</button>
                 </div>
 
-                {/* 입력 폼 */}
                 <form className="notice-modal-form" onSubmit={handleSubmit}>
-                    {/* 제목 입력 */}
                     <div className="notice-form-group">
                         <label>제목</label>
                         <input
