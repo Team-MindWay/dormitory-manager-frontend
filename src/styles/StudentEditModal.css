@@ -1,0 +1,324 @@
+/* 모달 배경 */
+.student-edit-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* 모달 박스 */
+.student-edit-modal-box {
+    width: 552px;
+    min-height: 310px;
+    background: #252525;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* 모달 헤더 */
+.student-edit-modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -10px;
+}
+
+/* 모달 제목 */
+.student-edit-modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: -14px;
+    left: 6px;
+}
+
+/* X 버튼 */
+.student-edit-x-btn {
+    all: unset;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.student-edit-x-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 학생 기본 정보 */
+.student-edit-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 16px;
+}
+
+/* 학생 기본 정보 (호수, 이름, 벌점) */
+.student-edit-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    gap: 170px;
+}
+
+.student-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 정보 라벨 */
+.info-label {
+    font-size: 14px;
+    color: #7e7e7e;
+    margin-bottom: 6px;
+}
+
+/* 정보 값 */
+.info-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+/* 수정 가능한 필드 */
+.student-edit-fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+}
+
+/* 수정 가능한 필드 공통 스타일 */
+.edit-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* ✅ 라벨 위치를 조정할 수 있도록 설정 */
+    width: 120px;
+    /* ✅ 모든 필드의 너비를 동일하게 */
+}
+
+/* 필드 라벨 (호실, 벌점, 역할) */
+.edit-field-label {
+    font-size: 14px;
+    color: #7e7e7e;
+    position: absolute;
+    /* ✅ 위치를 고정하여 원하는 곳으로 이동 */
+    top: -18px;
+    /* ✅ 위쪽으로 이동 */
+    left: 50%;
+    /* ✅ 가운데 정렬 */
+    transform: translateX(-50%);
+    /* ✅ 가로 방향 중앙 정렬 */
+    white-space: nowrap;
+    /* ✅ 글자가 줄 바꿈되지 않도록 설정 */
+}
+
+/* 호실 라벨 개별 조정 */
+.room-label {
+    top: -20px;
+    /* ✅ 더 위쪽으로 조정 가능 */
+    left: 20%;
+}
+
+/* 벌점 라벨 개별 조정 */
+.score-label {
+    top: -20px;
+    left: 10%;
+}
+
+/* 역할 라벨 개별 조정 */
+.role-label {
+    top: -20px;
+    left: 6%;
+}
+
+
+
+/* 호실 입력 필드 */
+.edit-input {
+
+    background: #3a3a3a;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: rgb(158, 156, 156);
+    /* 기본 색상 (연한 회색) */
+    text-align: center;
+    width: 65px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 사용자가 입력하면 텍스트 색상이 흰색으로 변경 */
+.edit-input:focus,
+.edit-input:not(:placeholder-shown) {
+    color: white;
+    /* 입력하면 흰색 */
+}
+
+/* 벌점 입력 박스 */
+.edit-score-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* ✅ 점을 항상 오른쪽에 위치 */
+    background: #3a3a3a;
+    border-radius: 4px;
+    width: 75px;
+    /* ✅ 너비를 조정 */
+    height: 36px;
+    padding: 0 8px;
+    margin-left: -30px;
+}
+
+/* 벌점 입력 필드 */
+.edit-input.score-input {
+    flex-grow: 1;
+    /* ✅ 입력 칸이 유동적으로 확장되도록 설정 */
+    background: transparent;
+    border: none;
+    text-align: left;
+    /* ✅ 입력 커서가 왼쪽에서 시작 */
+    font-size: 14px;
+    color: rgb(158, 156, 156);
+    outline: none;
+}
+
+/* 숫자 조정 버튼 제거 (크롬, 엣지) */
+.edit-input.score-input::-webkit-outer-spin-button,
+.edit-input.score-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 숫자 조정 버튼 제거 (파이어폭스) */
+.edit-input.score-input {
+    -moz-appearance: textfield;
+}
+
+/* 입력 시 텍스트 색상 변경 */
+.edit-input.score-input:focus,
+.edit-input.score-input:not(:placeholder-shown) {
+    color: white;
+}
+
+/* 벌점 단위 (점) */
+.point-unit {
+    font-size: 14px;
+    color: #7e7e7e;
+    margin-left: 4px;
+    flex-shrink: 0;
+    /* ✅ 점 크기 고정 */
+}
+
+
+/* 역할 선택 (초기 상태: 연한 회색) */
+.edit-select {
+    background: #3a3a3a;
+    border: none;
+    border-radius: 4px;
+    color: rgb(158, 156, 156);
+    /* ✅ 기본 색상 (연한 회색) */
+    font-size: 12px;
+    width: 130px;
+    height: 36px;
+    cursor: pointer;
+}
+
+/* 사용자가 선택하면 텍스트 색상이 흰색으로 변경 */
+.edit-select:focus,
+.edit-select option:checked {
+    color: white;
+}
+
+
+/* 벌점 단위 (점) */
+.point-unit {
+    font-size: 14px;
+    color: #7e7e7e;
+    flex-shrink: 0;
+    /* ✅ 점 크기 고정 */
+}
+
+
+/* 벌점 "점" 단위 정렬 */
+.point-unit {
+    margin-left: -26px;
+    font-size: 14px;
+    color: #7e7e7e;
+}
+
+/* 역할 선택 (초기 상태: 연한 회색) */
+.edit-select {
+    background: #3a3a3a;
+    border: none;
+    border-radius: 4px;
+    color: rgb(158, 156, 156);
+    /* ✅ 기본 색상 (연한 회색) */
+    font-size: 14px;
+    width: 130px;
+    height: 36px;
+    cursor: pointer;
+}
+
+/* 사용자가 선택하면 텍스트 색상이 흰색으로 변경 */
+.edit-select:focus,
+.edit-select option:checked {
+    color: white;
+}
+
+
+
+
+/* 완료 및 닫기 버튼 공통 스타일 */
+.student-edit-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+}
+
+.student-edit-footer-btn {
+    width: 100%;
+    padding: 10px 0;
+    background: #4c4c4c;
+    color: #7e7e7e;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.student-edit-footer-btn:hover {
+    background-color: #5d5c5c;
+    color: white;
+}
