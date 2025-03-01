@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "../../styles/PenaltyFormModal.css";
+import noResultImg from "../../assets/images/noresult.png"; // ✅ 이미지 import
 
 const CustomModal = ({ title, data, onClose }) => {
     const [searchTerm, setSearchTerm] = useState("");
 
-    // 🔍 검색어에 따라 데이터 필터링
+    //검색어에 따라 데이터 필터링
     const filteredData = data.filter(
         (item) =>
             item.room.includes(searchTerm) || item.name.includes(searchTerm)
@@ -14,13 +15,11 @@ const CustomModal = ({ title, data, onClose }) => {
     return (
         <div className="penalty-modal-overlay" onClick={onClose}>
             <div className="penalty-modal-box" onClick={(e) => e.stopPropagation()}>
-                {/* 모달 헤더 */}
                 <div className="penalty-modal-header">
                     <h2 className="penalty-modal-title">{title}</h2>
                     <button className="penalty-close-btn" onClick={onClose}>×</button>
                 </div>
 
-                {/* 🔍 검색 입력창 */}
                 <div className="penalty-search-bar">
                     <input
                         type="text"
@@ -58,11 +57,10 @@ const CustomModal = ({ title, data, onClose }) => {
                     </ul>
                 ) : (
                     <div className="penalty-no-result">
-                        <img src="/assets/no-result.png" alt="검색 결과 없음" className="no-result-icon" />
+                        <img src={noResultImg} alt="검색 결과 없음" className="no-result-icon" />
                         <p className="no-result-text">없는 이름이에요!</p>
                     </div>
                 )}
-
             </div>
         </div>
     );

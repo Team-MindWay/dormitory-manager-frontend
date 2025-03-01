@@ -13,6 +13,10 @@
 
 .penalty-modal-box {
     width: 552px;
+    min-height: 400px;
+    /* ✅ 최소 높이 설정 */
+    max-height: 600px;
+    /* ✅ 최대 높이 설정 (필요하면 조정) */
     background: #252525;
     border-radius: 18px;
     padding: 20px 10px;
@@ -21,8 +25,8 @@
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    min-height: auto;
 }
+
 
 .penalty-modal-content {
     display: flex;
@@ -82,11 +86,14 @@
 }
 
 .penalty-list {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 0;
     list-style: none;
+    overflow-y: auto;
+    /* 스크롤 추가 (필요하면) */
 }
 
 .penalty-item {
@@ -178,6 +185,7 @@
 
 /* 검색 결과 없을 때 메시지 스타일 */
 .penalty-no-result {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
