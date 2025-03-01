@@ -62,7 +62,7 @@
 
 /* 학생 정보 */
 .penalty-form-modal-content {
-    margin-top: -20px;
+    margin-top: -30px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -102,18 +102,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 16px;
-    border-radius: 8px;
-    border: 1px solid #3a3a3a;
+    padding: 2px 16px;
     background-color: #252525;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
     flex-wrap: nowrap;
+
 }
 
 .penalty-form-reason-box {
     display: flex;
-    gap: 10px;
+    gap: 6px;
 }
 
 .penalty-form-reason {
@@ -128,17 +127,20 @@
 /* 완료 및 닫기 버튼 */
 .penalty-form-footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
     padding: 16px;
+    gap: 8px;
 }
 
 .penalty-form-footer-btn {
-    width: 48%;
+    width: 100%;
     padding: 10px 0;
     background: #4c4c4c;
     color: #7e7e7e;
     font-size: 16px;
     font-weight: 600;
+    text-align: center;
     border-radius: 4px;
     border: none;
     cursor: pointer;
@@ -162,17 +164,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     border: 1px solid #bdbdbd;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     position: relative;
 }
 
 .custom-checkbox .custom-checkmark {
-    font-size: 26px;
+    font-size: 22ㅇpx;
     font-weight: 100;
     font-family: Arial, sans-serif;
     color: #a4e63a;

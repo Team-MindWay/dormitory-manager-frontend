@@ -72,7 +72,10 @@ const PenaltyModal = ({ student, onClose }) => {
 
                 {/* 완료 및 닫기 버튼 */}
                 <div className="penalty-form-footer">
-                    <button className="penalty-form-footer-btn">완료</button>
+                    <button className="penalty-form-footer-btn" disabled={!selectedPenalties.length}>
+                        완료
+                    </button>
+
                     <button className="penalty-form-footer-btn" onClick={onClose}>닫기</button>
                 </div>
             </div>

@@ -42,7 +42,7 @@ const StudentSelectModal = ({ title, data, onClose, onSelect }) => {
                 {filteredData.length > 0 ? (
                     <ul className="penalty-list">
                         {filteredData.map((item, index) => (
-                            <li key={index} className="penalty-item" onClick={() => onSelect(item)}> {/* ✅ 학생 선택 기능 추가 */}
+                            <li key={index} className="penalty-item" onClick={() => onSelect(item)}> {/* 학생 선택 기능 추가 */}
                                 <div className="penalty-info">
                                     <span className="penalty-room">{item.room}</span>
                                     <span className="penalty-name">{item.name}</span>
