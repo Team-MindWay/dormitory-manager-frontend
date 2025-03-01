@@ -175,3 +175,27 @@
     font-weight: bold;
     font-size: 14px;
 }
+
+/* 검색 결과 없을 때 메시지 스타일 */
+.penalty-no-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    color: #5a5959;
+    margin-top: 20px;
+}
+
+.no-result-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    color: #5a5959;
+}
+
+.no-result-text {
+    font-size: 16px;
+    color: #5a5959;
+    font-weight: 500;
+}
