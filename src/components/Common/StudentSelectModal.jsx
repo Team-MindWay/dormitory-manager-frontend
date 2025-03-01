@@ -3,10 +3,10 @@ import { FaSearch } from "react-icons/fa";
 import "../../styles/PenaltyFormModal.css";
 import noResultImg from "../../assets/images/noresult.png"; // ✅ 이미지 import
 
-const CustomModal = ({ title, data, onClose }) => {
+const StudentSelectModal = ({ title, data, onClose, onSelect }) => {
     const [searchTerm, setSearchTerm] = useState("");
 
-    //검색어에 따라 데이터 필터링
+    // 검색어에 따라 데이터 필터링
     const filteredData = data.filter(
         (item) =>
             item.room.includes(searchTerm) || item.name.includes(searchTerm)
@@ -33,7 +33,6 @@ const CustomModal = ({ title, data, onClose }) => {
                     </button>
                 </div>
 
-                {/* 테이블 헤더 */}
                 <div className="penalty-list-header">
                     <span className="penalty-header-room">호수</span>
                     <span className="penalty-header-name">이름</span>
@@ -43,7 +42,7 @@ const CustomModal = ({ title, data, onClose }) => {
                 {filteredData.length > 0 ? (
                     <ul className="penalty-list">
                         {filteredData.map((item, index) => (
-                            <li key={index} className="penalty-item">
+                            <li key={index} className="penalty-item" onClick={() => onSelect(item)}> {/* ✅ 학생 선택 기능 추가 */}
                                 <div className="penalty-info">
                                     <span className="penalty-room">{item.room}</span>
                                     <span className="penalty-name">{item.name}</span>
@@ -66,4 +65,4 @@ const CustomModal = ({ title, data, onClose }) => {
     );
 };
 
-export default CustomModal;
+export default StudentSelectModal;
