@@ -9,7 +9,8 @@ const StudentSelectModal = ({ title, data, onClose, onSelect }) => {
     // 검색어에 따라 데이터 필터링
     const filteredData = data.filter(
         (item) =>
-            item.room.includes(searchTerm) || item.name.includes(searchTerm)
+            item.room.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     return (
