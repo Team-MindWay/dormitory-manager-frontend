@@ -2,9 +2,21 @@ import React, { useState } from "react";
 import "../../styles/StudentEditModal.css";
 
 const StudentEditModal = ({ student, onClose }) => {
-    const [room, setRoom] = useState("");  // 기본값을 비워두고 placeholder로 표시
-    const [score, setScore] = useState("");  // 기본값을 비워두고 placeholder로 표시
+    const [room, setRoom] = useState("");
+    const [score, setScore] = useState("");
     const [role, setRole] = useState("일반 학생");
+
+    // 호실 입력 값 검증 (숫자만 입력 가능, 공백 제거)
+    const handleRoomChange = (e) => {
+        const value = e.target.value.replace(/\D/g, ""); // 숫자만 남기기
+        setRoom(value);
+    };
+
+    // 벌점 입력 값 검증 (숫자만 입력 가능, 음수 입력 방지)
+    const handleScoreChange = (e) => {
+        const value = e.target.value.replace(/\D/g, ""); // 숫자만 남기기
+        setScore(value);
+    };
 
     return (
         <div className="student-edit-modal-overlay" onClick={onClose}>
@@ -40,39 +52,38 @@ const StudentEditModal = ({ student, onClose }) => {
                             <input
                                 type="text"
                                 className="edit-input"
-                                placeholder={`${student.room}`}  // 현재 호실을 placeholder로 설정
-                                defaultValue={room}  // 초기값을 비워두고 placeholder 적용
-                                onChange={(e) => setRoom(e.target.value)}
+                                placeholder={`${student.room}`}
+                                value={room}
+                                onChange={handleRoomChange}
                             />
                         </div>
 
+                        {/* 벌점 입력 필드 (숫자만 입력 가능) */}
                         <div className="edit-field">
                             <span className="edit-field-label score-label">벌점</span>
                             <div className="edit-score-box">
+                                {/* 벌점 입력 필드 */}
                                 <input
-                                    type="number"
+                                    type="text"
                                     className="edit-input score-input"
                                     placeholder={`${student.score}`}
-                                    defaultValue={score}
-                                    onChange={(e) => setScore(e.target.value)}
+                                    value={score}
+                                    onChange={handleScoreChange}
                                 />
                                 <span className="point-unit">점</span>
                             </div>
                         </div>
 
-
                         {/* 역할 선택 필드 */}
                         <div className="edit-field">
                             <span className="edit-field-label role-label">역할</span>
                             <select value={role} onChange={(e) => setRole(e.target.value)} className="edit-select">
-                                <option hidden>역할 선택</option>  {/* 기본값: 선택되지 않음 */}
+                                <option hidden>역할 선택</option>
                                 <option>일반 학생</option>
                                 <option>기숙사 운영진</option>
                             </select>
-
                         </div>
                     </div>
-
                 </div>
 
                 {/* 완료 및 닫기 버튼 */}
