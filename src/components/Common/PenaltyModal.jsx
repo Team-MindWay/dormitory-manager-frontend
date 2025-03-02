@@ -24,16 +24,15 @@ const PenaltyModal = ({ student, onClose }) => {
     };
 
     return (
-        <div className="penalty-form-modal-overlay" onClick={onClose}>
-            <div className="penalty-form-modal-box" onClick={(e) => e.stopPropagation()}>
-                {/* 모달 헤더 */}
-                <div className="penalty-form-modal-header">
+        <dialog className="penalty-form-modal-overlay" open onClick={onClose}>
+            <section className="penalty-form-modal-box" onClick={(e) => e.stopPropagation()}>
+
+                <header className="penalty-form-modal-header">
                     <h2 className="penalty-form-title">벌점 주기</h2>
                     <button className="penalty-form-close-btn" onClick={onClose}>×</button>
-                </div>
+                </header>
 
-                {/* 학생 정보 */}
-                <div className="penalty-form-modal-content">
+                <article className="penalty-form-modal-content">
                     <div className="penalty-form-student-header">
                         <span className="penalty-form-label">호수</span>
                         <span className="penalty-form-label">이름</span>
@@ -45,12 +44,11 @@ const PenaltyModal = ({ student, onClose }) => {
                         <span className="penalty-form-name">{student.name}</span>
                         <span className="penalty-form-score">{student.score}점</span>
                     </div>
-                </div>
+                </article>
 
-                {/* 벌점 항목 리스트 */}
-                <div className="penalty-form-list">
+                <ul className="penalty-form-list">
                     {penaltyReasons.map((item, index) => (
-                        <div key={index} className="penalty-form-item">
+                        <li key={index} className="penalty-form-item">
                             <div className="penalty-form-reason-box">
                                 <span className="penalty-form-reason">{item.reason}</span>
                                 <span className="penalty-form-points">{item.score}점</span>
@@ -64,22 +62,17 @@ const PenaltyModal = ({ student, onClose }) => {
                                 />
                                 <span className="custom-checkmark">✔</span>
                             </label>
-
-
-                        </div>
+                        </li>
                     ))}
-                </div>
-
-                {/* 완료 및 닫기 버튼 */}
-                <div className="penalty-form-footer">
+                </ul>
+                <footer className="penalty-form-footer">
                     <button className="penalty-form-footer-btn" disabled={!selectedPenalties.length}>
                         완료
                     </button>
-
                     <button className="penalty-form-footer-btn" onClick={onClose}>닫기</button>
-                </div>
-            </div>
-        </div>
+                </footer>
+            </section>
+        </dialog>
     );
 };
 
