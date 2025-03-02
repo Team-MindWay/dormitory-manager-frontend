@@ -6,12 +6,17 @@ import noResultImg from "../../assets/images/noresult.png"; // ✅ 이미지 imp
 const StudentSelectModal = ({ title, data, onClose, onSelect }) => {
     const [searchTerm, setSearchTerm] = useState("");
 
-    // 검색어에 따라 데이터 필터링
+    //  검색어에 따라 데이터 필터링 (실시간 검색 & 버튼 검색 함께 적용)
     const filteredData = data.filter(
         (item) =>
             item.room.toLowerCase().includes(searchTerm.toLowerCase()) ||
             item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    // 버튼 클릭 시 현재 검색어 그대로 유지하면서 필터링 (재검색 기능)
+    const handleSearch = () => {
+        setSearchTerm((prev) => prev); // 값은 그대로 두고, 필터링 재적용
+    };
 
     return (
         <div className="penalty-modal-overlay" onClick={onClose}>
@@ -29,7 +34,7 @@ const StudentSelectModal = ({ title, data, onClose, onSelect }) => {
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
-                    <button className="penalty-search-btn">
+                    <button className="penalty-search-btn" onClick={handleSearch}>  {/* ✅ 버튼 클릭 시 필터링 유지 */}
                         <FaSearch />
                     </button>
                 </div>
