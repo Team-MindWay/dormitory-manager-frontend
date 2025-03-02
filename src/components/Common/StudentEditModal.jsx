@@ -6,28 +6,32 @@ const StudentEditModal = ({ student, onClose }) => {
     const [score, setScore] = useState("");
     const [role, setRole] = useState("일반 학생");
 
-    // 호실 입력 값 검증 (숫자만 입력 가능, 공백 제거)
+    // 호실 입력 값 검증 
     const handleRoomChange = (e) => {
-        const value = e.target.value.replace(/\D/g, ""); // 숫자만 남기기
+        let value = e.target.value.replace(/\D/g, "");
+        if (value !== "") {
+            value = Math.min(1000, Math.max(0, Number(value)));
+        }
         setRoom(value);
     };
 
-    // 벌점 입력 값 검증 (숫자만 입력 가능, 음수 입력 방지)
+    // 벌점 입력 값 검증 
     const handleScoreChange = (e) => {
-        const value = e.target.value.replace(/\D/g, ""); // 숫자만 남기기
+        let value = e.target.value.replace(/\D/g, "");
+        if (value !== "") {
+            value = Math.min(100, Math.max(0, Number(value)));
+        }
         setScore(value);
     };
 
     return (
         <div className="student-edit-modal-overlay" onClick={onClose}>
             <div className="student-edit-modal-box" onClick={(e) => e.stopPropagation()}>
-                {/* 모달 헤더 */}
                 <div className="student-edit-modal-header">
                     <h2 className="student-edit-modal-title">학생 수정</h2>
                     <button className="student-edit-x-btn" onClick={onClose}>×</button>
                 </div>
 
-                {/* 학생 기본 정보 */}
                 <div className="student-edit-modal-content">
                     <div className="student-edit-info">
                         <div className="student-info-item">
@@ -44,7 +48,6 @@ const StudentEditModal = ({ student, onClose }) => {
                         </div>
                     </div>
 
-                    {/* 수정 가능한 항목 (호실, 벌점, 역할) */}
                     <div className="student-edit-fields">
                         {/* 호실 입력 필드 */}
                         <div className="edit-field">
@@ -58,7 +61,6 @@ const StudentEditModal = ({ student, onClose }) => {
                             />
                         </div>
 
-                        {/* 벌점 입력 필드 (숫자만 입력 가능) */}
                         <div className="edit-field">
                             <span className="edit-field-label score-label">벌점</span>
                             <div className="edit-score-box">
