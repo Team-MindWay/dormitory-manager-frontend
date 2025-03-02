@@ -16,11 +16,15 @@ const PenaltyModal = ({ student, onClose }) => {
 
     // 체크박스 선택 관리
     const togglePenalty = (reason) => {
-        setSelectedPenalties((prev) =>
-            prev.includes(reason)
-                ? prev.filter((item) => item !== reason)
-                : [...prev, reason]
-        );
+        setSelectedPenalties((prev) => {
+            const updatedSet = new Set(prev);
+            if (updatedSet.has(reason)) {
+                updatedSet.delete(reason);
+            } else {
+                updatedSet.add(reason);
+            }
+            return Array.from(updatedSet);
+        });
     };
 
     return (
