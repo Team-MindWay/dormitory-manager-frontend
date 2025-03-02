@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "../../styles/ActionButtons.css";
 import { FaClipboardList, FaUserEdit } from "react-icons/fa";
-import StudentSelectModal from "../Common/StudentSelectModal"; // 학생 선택 모달
-import PenaltyModal from "../Common/PenaltyModal"; // 벌점 부여 모달
-import StudentEditModal from "../Common/StudentEditModal"; // 학생 수정 모달 추가
+import StudentSelectModal from "../Common/StudentSelectModal";
+import PenaltyModal from "../Common/PenaltyModal";
+import StudentEditModal from "../Common/StudentEditModal";
 
-// 1️⃣ modalType을 상수로 관리 (ENUM처럼)
 const MODAL_TYPES = {
     PENALTY: "penalty",
     PENALTY_FORM: "penaltyForm",
@@ -28,16 +27,11 @@ const studentData = [
 
 const ActionButtons = () => {
     const [modalType, setModalType] = useState(null);
-    const [selectedStudent, setSelectedStudent] = useState(null); // 선택된 학생 저장
+    const [selectedStudent, setSelectedStudent] = useState(null);
 
-    const handleSelectStudentForPenalty = (student) => {
+    const handleSelectStudent = (student, modalType) => {
         setSelectedStudent(student);
-        setModalType(MODAL_TYPES.PENALTY_FORM);
-    };
-
-    const handleSelectStudentForEdit = (student) => {
-        setSelectedStudent(student);
-        setModalType(MODAL_TYPES.EDIT_STUDENT_FORM);
+        setModalType(modalType);
     };
 
     return (
@@ -60,7 +54,7 @@ const ActionButtons = () => {
                     title="벌점 주기"
                     data={penaltyData}
                     onClose={() => setModalType(null)}
-                    onSelect={handleSelectStudentForPenalty} // 학생 선택 후 벌점 부여 모달 연결
+                    onSelect={(student) => handleSelectStudent(student, MODAL_TYPES.PENALTY_FORM)}
                 />
             )}
 
@@ -75,7 +69,7 @@ const ActionButtons = () => {
                     title="학생 수정"
                     data={studentData}
                     onClose={() => setModalType(null)}
-                    onSelect={handleSelectStudentForEdit} // 학생 선택 후 수정 모달 연결
+                    onSelect={(student) => handleSelectStudent(student, MODAL_TYPES.EDIT_STUDENT_FORM)}
                 />
             )}
 
