@@ -1,17 +1,18 @@
 /* 로그인 박스 전체 */
 .start-box {
+  width: 20.9rem;
+  height: 8.13rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  width: 383px;
+  gap: 1.25rem;
   text-align: center;
   position: fixed;
 }
 
 /* 타이틀 */
 .title {
-  font-size: 32px;
+  font-size: 1.5rem;
   font-family: "SUIT-Medium", Helvetica;
   font-weight: 500;
   color: #f1f1f1;
@@ -19,23 +20,23 @@
 
 /* 로고 텍스트 */
 .logo-text {
-  font-size: 32px;
+  font-size: 1.5rem;
   font-family: "SUIT-Heavy", Helvetica;
-  font-weight: 700;
-  color: limegreen;
+  font-weight: 900;
+  color: #9ad54a;
 }
 
 /*  로그인 버튼 */
 .login-button {
   width: 100%;
-  padding: 12px 0;
-  font-size: 22px;
+  padding: 0.75rem 0;
+  font-size: 1.25rem;
   font-family: "SUIT-SemiBold", Helvetica;
   font-weight: 600;
   background-color: #333;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   cursor: pointer;
 }
 
@@ -44,14 +45,14 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 14px;
+  height: 10%;
   width: 100%;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 /*  회원가입 텍스트 */
 .signup-text {
-  font-size: 14px;
+  font-size: 1rem;
   font-family: "SUIT-Medium", Helvetica;
   font-weight: 500;
   color: #f1f1f1;
@@ -59,7 +60,7 @@
 
 /*  회원가입 링크 */
 .signup-link {
-  font-size: 14px;
+  font-size: 1rem;
   font-family: "SUIT-SemiBold", Helvetica;
   font-weight: 600;
   color: white;
