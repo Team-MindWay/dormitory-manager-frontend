@@ -1,27 +1,27 @@
 .FindID-box {
-  width: 383px;
+  width: 20.9rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 1.25rem;
 }
 
 .result-box {
   width: 100%;
   height: 88px;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   background-color: #2f2f2f;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 1.25rem;
 }
 
 .findid-text {
   width: 130px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
   text-align: center;
@@ -29,7 +29,7 @@
 
 .findid {
   width: 100%;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 800;
   display: inline;
   align-items: center;
@@ -41,7 +41,7 @@ p {
 }
 
 .form-box {
-  width: 383px;
+  width: 20.9rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,20 +56,20 @@ p {
 }
 
 .password-text,
-.name-box {
+.name-text {
   color: #fafafa;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 input {
-  height: 44px;
+  height: 2.75rem;
   outline: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: 1px solid #9c9c9c;
   background-color: #1e1e1e;
   color: #9c9c9c;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 0 15px;
 }
@@ -77,12 +77,12 @@ input {
 .Button {
   width: 100%;
   height: 49px;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border: none;
 
   background-color: #2f2f2f;
   color: #e0e0e0;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
 }
