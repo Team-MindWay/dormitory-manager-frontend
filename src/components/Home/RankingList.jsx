@@ -4,9 +4,9 @@ import { useStudents } from "../../context/StudentContext";
 import "../../styles/RankingList.css";
 
 const RankingList = () => {
-    const { students } = useStudents(); // ✅ 학생 데이터 불러오기
+    const { students } = useStudents(); //학생 데이터 불러오기
 
-    // ✅ 점수를 기준으로 정렬된 랭킹 데이터 생성
+    // 점수를 기준으로 정렬된 랭킹 데이터 생성
     const sortedRanking = [...students].sort((a, b) => b.score - a.score);
 
     return (
