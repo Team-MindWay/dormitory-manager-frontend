@@ -1,6 +1,6 @@
 .notice-board {
-    width: 100%;
-    max-width: 400px;
+    flex-grow: 1;
+    flex-basis: 1060px;
     height: 560px;
     background-color: #252525;
     border-radius: 12px;
@@ -8,6 +8,7 @@
     box-sizing: border-box;
     overflow: hidden;
 }
+
 
 .notice-board h2 {
     text-align: center;
@@ -39,6 +40,8 @@
     justify-content: center;
     gap: 10px;
     margin: -6px;
+    width: 100%;
+    max-width: 480px;
 }
 
 .notice-divider {
