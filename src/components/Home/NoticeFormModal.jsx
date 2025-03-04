@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "../../styles/NoticeFormModal.css";
 
-const NoticeFormModal = ({ onClose }) => {
+const NoticeFormModal = ({ onClose, onSubmit }) => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("새 공지:", { title, content });
-        onClose();
+        if (!title.trim() || !content.trim()) return;
+        onSubmit({ title, content });
+        setTitle("");
+        setContent("");
     };
 
     return (
@@ -32,7 +34,6 @@ const NoticeFormModal = ({ onClose }) => {
                         />
                     </div>
 
-                    {/* 내용 입력 */}
                     <div className="notice-form-group">
                         <label>내용</label>
                         <textarea
@@ -44,7 +45,6 @@ const NoticeFormModal = ({ onClose }) => {
                         />
                     </div>
 
-                    {/* 완료 버튼 */}
                     <button type="submit" className="notice-submit-btn">완료</button>
                 </form>
             </div>

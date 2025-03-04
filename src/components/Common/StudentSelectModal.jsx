@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { useStudents } from "../../context/StudentContext";
 import "../../styles/PenaltyFormModal.css";
-import noResultImg from "../../assets/images/noresult.png"; // ✅ 이미지 import
+import noResultImg from "../../assets/images/noresult.png";
 
-const StudentSelectModal = ({ title, data, onClose, onSelect }) => {
+const StudentSelectModal = ({ title, onClose, onSelect }) => {
+    const { students } = useStudents();
     const [searchTerm, setSearchTerm] = useState("");
 
-    //  검색어에 따라 데이터 필터링 (실시간 검색 & 버튼 검색 함께 적용)
-    const filteredData = data.filter(
+    const filteredData = students.filter(
         (item) =>
-            item.room.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            item.room.toString().includes(searchTerm.toLowerCase()) ||
             item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -34,7 +35,7 @@ const StudentSelectModal = ({ title, data, onClose, onSelect }) => {
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
-                    <button className="penalty-search-btn" onClick={handleSearch}>  {/* ✅ 버튼 클릭 시 필터링 유지 */}
+                    <button className="penalty-search-btn" onClick={handleSearch}>
                         <FaSearch />
                     </button>
                 </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/PenaltyModal.css";
-
+import { useStudents } from "../../context/StudentContext";
 const penaltyReasons = [
     { reason: "불, 에어컨", score: 1 },
     { reason: "이불정리", score: 1 },
@@ -12,6 +12,7 @@ const penaltyReasons = [
 ];
 
 const PenaltyModal = ({ student, onClose }) => {
+    const { updateStudent } = useStudents(); // Context에서 updateStudent 가져오기
     const [selectedPenalties, setSelectedPenalties] = useState([]);
 
     // 체크박스 선택 관리
@@ -27,6 +28,16 @@ const PenaltyModal = ({ student, onClose }) => {
         });
     };
 
+
+    const totalScore = selectedPenalties.reduce((sum, p) => sum + p.score, 0);
+
+    const handleComplete = () => {
+        updateStudent({
+            ...student,
+            score: student.score + totalScore,
+        });
+        onClose();
+    };
     return (
         <dialog className="penalty-form-modal-overlay" open onClick={onClose}>
             <section className="penalty-form-modal-box" onClick={(e) => e.stopPropagation()}>
@@ -60,8 +71,8 @@ const PenaltyModal = ({ student, onClose }) => {
                             <label className="custom-checkbox">
                                 <input
                                     type="checkbox"
-                                    checked={selectedPenalties.includes(item.reason)}
-                                    onChange={() => togglePenalty(item.reason)}
+                                    checked={selectedPenalties.some((p) => p.reason === item.reason)}
+                                    onChange={() => togglePenalty(item)}
                                     className="hidden-checkbox"
                                 />
                                 <span className="custom-checkmark">✔</span>
@@ -70,8 +81,8 @@ const PenaltyModal = ({ student, onClose }) => {
                     ))}
                 </ul>
                 <footer className="penalty-form-footer">
-                    <button className="penalty-form-footer-btn" disabled={!selectedPenalties.length}>
-                        완료
+                    <button className="penalty-form-footer-btn" disabled={!selectedPenalties.length} onClick={handleComplete}>
+                        완료 (+{totalScore}점)
                     </button>
                     <button className="penalty-form-footer-btn" onClick={onClose}>닫기</button>
                 </footer>
