@@ -1,15 +1,14 @@
 import React from "react";
 import ListItem from "../Common/ListItem";
-import "../../styles/RankingList.css"; // 스타일 추가
-
-const rankingData = [
-    { rank: 1, name: "김재관", score: "7회" },
-    { rank: 2, name: "김재관", score: "7회" },
-    { rank: 3, name: "김재관", score: "7회" },
-    { rank: 4, name: "김재관", score: "7회" },
-];
+import { useStudents } from "../../context/StudentContext";
+import "../../styles/RankingList.css";
 
 const RankingList = () => {
+    const { students } = useStudents(); // ✅ 학생 데이터 불러오기
+
+    // ✅ 점수를 기준으로 정렬된 랭킹 데이터 생성
+    const sortedRanking = [...students].sort((a, b) => b.score - a.score);
+
     return (
         <div className="ranking-list">
             <h2>주간 랭킹</h2>
@@ -18,8 +17,8 @@ const RankingList = () => {
                 <div>이름</div>
                 <div>점수</div>
             </div>
-            {rankingData.map((user, index) => (
-                <ListItem key={index} rank={user.rank} name={user.name} score={user.score} />
+            {sortedRanking.map((user, index) => (
+                <ListItem key={user.id} rank={index + 1} name={user.name} score={`${user.score}회`} />
             ))}
         </div>
     );

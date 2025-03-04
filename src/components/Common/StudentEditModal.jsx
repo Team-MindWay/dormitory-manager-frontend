@@ -1,19 +1,18 @@
 import React, { useState } from "react";
+import { useStudents } from "../../context/StudentContext";
 import "../../styles/StudentEditModal.css";
 
 const StudentEditModal = ({ student, onClose }) => {
-    const [room, setRoom] = useState("");
-    const [score, setScore] = useState("");
-    const [role, setRole] = useState("일반 학생");
+    const { updateStudent } = useStudents();
 
-    // 호실 입력 값 검증 
+    const [room, setRoom] = useState(student.room);
+    const [score, setScore] = useState(student.score);
+    const [role, setRole] = useState(student.role || "일반 학생");
     const handleRoomChange = (e) => {
-        let value = e.target.value.replace(/\D/g, "");
-        if (value !== "") {
-            value = Math.min(1000, Math.max(0, Number(value)));
-        }
-        setRoom(value);
+        let value = e.target.value.replace(/호/g, "").replace(/\D/g, "");
+        setRoom(value === "" ? "" : Math.min(1000, Math.max(0, Number(value))));
     };
+
 
     // 벌점 입력 값 검증 
     const handleScoreChange = (e) => {
@@ -23,6 +22,18 @@ const StudentEditModal = ({ student, onClose }) => {
         }
         setScore(value);
     };
+
+    // 완료 버튼 클릭 시 학생 정보 업데이트
+    const handleComplete = () => {
+        updateStudent({
+            ...student,
+            room: room.toString().includes("호") ? room : `${room}호`,
+            score: Number(score),
+            role,
+        });
+        onClose();
+    };
+
 
     return (
         <div className="student-edit-modal-overlay" onClick={onClose}>
@@ -90,7 +101,7 @@ const StudentEditModal = ({ student, onClose }) => {
 
                 {/* 완료 및 닫기 버튼 */}
                 <div className="student-edit-footer">
-                    <button className="student-edit-footer-btn complete-btn">완료</button>
+                    <button className="student-edit-footer-btn complete-btn" onClick={handleComplete}>완료</button>
                     <button className="student-edit-footer-btn close-btn" onClick={onClose}>닫기</button>
                 </div>
             </div>
