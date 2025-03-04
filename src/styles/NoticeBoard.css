@@ -4,7 +4,9 @@
     height: 560px;
     background-color: #252525;
     border-radius: 12px;
-    padding: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .notice-board h2 {
@@ -13,8 +15,7 @@
     font-weight: 700;
     color: white;
     font-size: 24px;
-    margin-top: -8px;
-    margin-bottom: 25px;
+    margin-top: 6px;
 }
 
 .notice-list {
@@ -22,7 +23,15 @@
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding-right: 5px;
+    padding-top: 16px;
 }
+
+
 
 .notice-divider-container {
     display: flex;
@@ -48,7 +57,7 @@
 
 .add-notice-btn {
     position: fixed;
-    bottom: 78px;
+    bottom: 140px;
     right: 300px;
     width: 40px;
     height: 40px;
