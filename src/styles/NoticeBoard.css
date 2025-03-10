@@ -1,79 +1,76 @@
 .notice-board {
-    flex-grow: 1;
-    flex-basis: 1060px;
-    height: 560px;
-    background-color: #252525;
-    border-radius: 12px;
-    padding: 16px;
-    box-sizing: border-box;
-    overflow: hidden;
+  flex-grow: 1;
+  flex-basis: 66.25rem;
+  height: 35rem;
+  background-color: #252525;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-
 .notice-board h2 {
-    text-align: center;
-    font-family: "SUIT-Bold", Helvetica;
-    font-weight: 700;
-    color: white;
-    font-size: 24px;
-    margin-top: 6px;
+  text-align: center;
+  font-family: "SUIT-Bold", Helvetica;
+  font-weight: 700;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 0.375rem;
 }
 
 .notice-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    max-height: 400px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    padding-right: 5px;
-    padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-height: 25rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-right: 0.3125rem;
+  padding-top: 1rem;
 }
 
-
-
 .notice-divider-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: -6px;
-    width: 100%;
-    max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  margin: -0.375rem;
+  width: 100%;
+  max-width: 30rem;
 }
 
 .notice-divider {
-    flex: 1;
-    height: 1px;
-    background-color: #504f4f;
+  flex: 1;
+  height: 0.0625rem;
+  background-color: #504f4f;
 }
 
 .notice-date {
-    font-size: 12px;
-    font-weight: 600;
-    color: #5d5c5c;
-    text-align: center;
-    white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #5d5c5c;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .add-notice-btn {
-    position: fixed;
-    bottom: 140px;
-    right: 296px;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    background-color: #5d5c5c;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
+  position: fixed;
+  bottom: 8.75rem;
+  right: 18.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: #5d5c5c;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .add-notice-btn:hover {
-    background-color: #7a7979;
+  background-color: #7a7979;
 }
