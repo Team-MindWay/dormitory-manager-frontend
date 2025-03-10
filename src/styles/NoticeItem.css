@@ -1,47 +1,45 @@
 .notice-item {
-    background-color: #2d2d2d;
-    border-radius: 8px;
-    padding: 16px 10px;
-    width: 100%;
-    max-width: 100%;
-    word-wrap: break-word;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
+  background-color: #2d2d2d;
+  border-radius: 0.5rem;
+  padding: 1rem 0.625rem;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .notice-item:hover {
-    background-color: #3a3a3a;
+  background-color: #3a3a3a;
 }
 
 .notice-content {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .notice-title {
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    margin-bottom: 2px;
-
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.125rem;
 }
 
 .notice-text {
-    font-size: 14px;
-    font-weight: 300;
-    color: #aaaaaa;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-overflow: clip;
-    display: block;
-    margin: 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #aaaaaa;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-overflow: clip;
+  display: block;
+  margin: 0;
 }
 
 .notice-text h1,
@@ -50,18 +48,18 @@
 .notice-text h4,
 .notice-text h5,
 .notice-text h6 {
-    text-align: left !important;
-    margin: 10px 0;
-    padding: 5px 0;
-    font-weight: bold;
+  text-align: left !important;
+  margin: 0.625rem 0;
+  padding: 0.3125rem 0;
+  font-weight: bold;
 }
 
 .notice-text ul,
 .notice-text ol {
-    padding-left: 20px;
-    margin: 5px 0;
+  padding-left: 1.25rem;
+  margin: 0.3125rem 0;
 }
 
 .notice-text li {
-    text-align: left;
+  text-align: left;
 }
