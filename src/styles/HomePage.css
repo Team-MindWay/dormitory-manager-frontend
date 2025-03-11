@@ -15,11 +15,6 @@
   max-width: 75rem;
 }
 
-.action-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
 .content-section {
   display: flex;
   justify-content: space-between;

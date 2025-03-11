@@ -1,7 +1,7 @@
 .header {
   display: flex;
   align-items: center;
-  gap: 1.875rem;
+  gap: 1.275rem;
   margin-bottom: -2.125rem;
 }
 
@@ -33,7 +33,7 @@
   background-color: #252525;
   padding: 1.25rem;
   border-radius: 0.625rem;
-  gap: 1.625rem;
+  gap: 1.525rem;
   margin-bottom: 0.75rem;
 }
 
