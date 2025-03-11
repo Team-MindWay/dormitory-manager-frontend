@@ -31,6 +31,10 @@
   padding-top: 1rem;
 }
 
+.notice-list::-webkit-scrollbar {
+  display: none;
+}
+
 .notice-divider-container {
   display: flex;
   align-items: center;
